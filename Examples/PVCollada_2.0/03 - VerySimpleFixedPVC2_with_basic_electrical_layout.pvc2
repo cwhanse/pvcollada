@@ -40,7 +40,7 @@
 				<pv:components>
 					<!-- List of modules -->
 					<pv:modules>
-						<!-- module tag. Would usually contain a link to a PAN file or its content as CDATA -->
+						<!-- module tag -->
 						<pv:module id="ModuleModel1">
 							<pv:manufacturer>Generic</pv:manufacturer>
 							<pv:name>Generic 300W bifacial</pv:name>
@@ -53,7 +53,7 @@
 					</pv:modules>
 					<!-- List of inverters -->
 					<pv:inverters>
-						<!-- inverter tag. Would usually contain a link to an OND file or its content as CDATA -->
+						<!-- inverter tag -->
 						<pv:inverter id="InverterModel1">
 							<pv:manufacturer>Generic</pv:manufacturer>
 							<pv:name>Generic inverter</pv:name>
@@ -81,7 +81,7 @@
 					<pv:circuit_root>
 						<!-- Inverter -->
 						<pv:instance_inverter url="#InverterModel1" id="inverterInstance1" name="Inverter #1">
-							<!-- Cable between the inverter and the injection point -->
+							<!-- Cable between the inverter and the circuit_root -->
 							<pv:cable_to_parent url="#CableModel1" length="10" id="cableInstance1" />
 							<!-- mppts tag -->
 							<pv:mppts>
