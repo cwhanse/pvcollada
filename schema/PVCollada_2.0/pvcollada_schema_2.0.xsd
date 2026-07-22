@@ -77,11 +77,12 @@ xmlns:collada="http://www.collada.org/2008/03/COLLADASchema">
       <xs:enumeration value="dual_axis" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="torque_tube_shape_enum" final="restriction">
+  <xs:simpleType name="xsection_shape_enum" final="restriction">
     <xs:restriction base="xs:string">
       <xs:enumeration value="circle" />
       <xs:enumeration value="rectangle" />
       <xs:enumeration value="octogon" />
+      <xs:enumeration value="h-shape" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="drive_type_enum" final="restriction">
@@ -95,13 +96,6 @@ xmlns:collada="http://www.collada.org/2008/03/COLLADASchema">
       <xs:enumeration value="rack" />
       <xs:enumeration value="tracker" />
       <xs:enumeration value="fence" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="post_shape_enum" final="restriction">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="rectangle" />
-      <xs:enumeration value="circle" />
-      <xs:enumeration value="h-shape" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="post_inclin_enum" final="restriction">
@@ -1022,7 +1016,7 @@ xmlns:collada="http://www.collada.org/2008/03/COLLADASchema">
 						For example, a positive rotation for azimuth=180° is to the west.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="tracker_torque_tube_shape" type="torque_tube_shape_enum" minOccurs="0">
+				<xs:element name="tracker_torque_tube_shape" type="xsection_shape_enum" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Shape of the torque tube's cross-section for a single-axis tracker.</xs:documentation>
 					</xs:annotation>
@@ -1078,7 +1072,7 @@ xmlns:collada="http://www.collada.org/2008/03/COLLADASchema">
             <xs:documentation>The nominal inclination of the post (vertical, perpendicular).</xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="shape" type="post_shape_enum" minOccurs="0">
+        <xs:element name="shape" type="xsection_shape_enum" minOccurs="0">
           <xs:annotation>
             <xs:documentation>The shape of the post cross-section (rectangle, circle, h-shape).</xs:documentation>
           </xs:annotation>
