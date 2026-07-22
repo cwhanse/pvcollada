@@ -76,11 +76,11 @@
 					</pv:cables>
 				</pv:components>
 				<pv:circuit>
-					<!-- injection_point tag => Always the parent of the tree -->
+					<!-- circuit_root tag => Always the parent of the tree -->
 					<pv:circuit_root>
 						<!-- Inverter -->
 						<pv:instance_inverter url="#InverterModel1" id="inverterInstance1" name="Inverter #1">
-							<!-- Cable between the inverter and the injection point -->
+							<!-- Cable between the inverter and the circuit_root -->
 							<pv:cable_to_parent url="#CableModel1" length="10" id="cableInstance1" />
 							<!-- mppts tag -->
 							<pv:mppts>
